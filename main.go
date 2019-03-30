@@ -102,7 +102,6 @@ func checkStrategy(config *config, datePrices []*datePrice, logger *logger) {
 	for i := range datePrices {
 		r := checkInPeriod(config, datePrices[i:], logger)
 
-		// r := checkInPeriod(config, datePrices, logger)
 		switch r {
 		case success:
 			successCount++
