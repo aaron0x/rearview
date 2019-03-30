@@ -1,0 +1,21 @@
+Rearview is a backtesting tool for S&P 500.
+I saw a investing article, it said you can invest 3 hundred thousand in S&P 500,
+after 10 year past, your investment will worth 6 hundred thousand by the long term rate of return.
+So I write this program to check the idea, inflation considered, by historical data.
+
+This program takes each day as starting point, and see whether the idea can keep your capital growth enough to defense inflation in a period of time.
+You can download historical data from yahoo finace, it's a csv file.
+
+Usage:
+1. your capital is 160000
+2. cost of live is 10000
+3. inflation rate is 1.015
+4. expecting to trading once per 10 years
+5. hoping your capital won’t depreciate during 5 trading
+
+go run main.go -c 160000 -l 10000 -i 1.015 -y 10 -r 5 
+success 414, failed: 8768, N/A: 8239, successful rate 0.045088
+
+The idea works in 414 days, fail in 8768 days, N/A 8239  days (no enough data), the successful rate is 0.045088 (success/(success+failed))
+
+Have fun!
